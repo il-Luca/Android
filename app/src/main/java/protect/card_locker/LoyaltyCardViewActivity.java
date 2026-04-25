@@ -678,7 +678,7 @@ public class LoyaltyCardViewActivity extends CatimaAppCompatActivity implements 
             window.setAttributes(attributes);
         }
 
-        // Pause NFC to prevent interference with barcode scanners
+        // Pause NFC to prevent NFC payments from triggering while showing a barcode
         if (settings.getDisableNfcWhileViewingCard()) {
             NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(this);
             if (nfcAdapter != null) {
@@ -815,6 +815,17 @@ public class LoyaltyCardViewActivity extends CatimaAppCompatActivity implements 
         invalidateOptionsMenu();
 
         ShortcutHelper.updateShortcuts(this);
+    }
+
+    @Override
+    protected void onPause() {
+        if (settings != null && settings.getDisableNfcWhileViewingCard()) {
+            NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(this);
+            if (nfcAdapter != null) {
+                nfcAdapter.disableReaderMode(this);
+            }
+        }
+        super.onPause();
     }
 
     private void setStateBasedOnImageTypes() {
