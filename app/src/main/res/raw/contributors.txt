@@ -14,6 +14,7 @@ Katharine Chui / Katie
 mondstern
 IllusiveMan196
 Silvério Santos
+Максим Горпиніч
 Edgars Andersons
 Altonss
 Liner Seven
@@ -23,11 +24,9 @@ Fjuro
 GitSpoon
 Priit Jõerüüt
 Eric
-Максим Горпиніч
 GM
 laralem
 Petr Novák
-Горпиніч Максим Олександрович
 Taco
 nadiafekihahmed
 pfaffenrodt
@@ -95,7 +94,7 @@ Andre Costa
 arshbeerSingh
 Augustin LAVILLE
 Freddo espresso
-Vasudev R.
+Govind S Nair
 Kim Seohyun
 echo r"0xX4H" | rev
 rudy3
